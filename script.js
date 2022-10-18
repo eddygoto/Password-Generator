@@ -21,19 +21,23 @@ var noSpecialNoNumber = lowercase.concat(uppercase);
 
 // Return a random password
 function generatePassword() {
-// logic goes here
+// prompts the user on button click and sets the password length
 var passwordLength = prompt("How many characters would you like your password to contain?");
   if (passwordLength < 8 || passwordLength > 168) {
+    // alerts the user if password is unavailable to create
     alert("Sorry, your password must contain between 8 and 168 characters.");
   } else if (passwordLength >= 8 && passwordLength <= 168) {
+    // otherwise, creates 4 boolean statements that define what characterset will go into the password creation
     var specialConfirm = confirm("Would you like your password to contain special characters?");
     var numberConfirm = confirm("Would you like your password to contain numbers?");
     var lowerConfirm = confirm("Would you like your password to contain lowercase letters?");
     var upperConfirm = confirm("Would you like your password to contain uppercase letters?");
   };
 
+// new variable for the password generated
 var randomPassword = "";
 
+// couldnt figure out how to concat the arrays to make the function function, instead decided to run each if statement manually
 if (specialConfirm && numberConfirm && lowerConfirm && upperConfirm) {
   for (var i = 0; i <= passwordLength; i++) {
   randomPassword += fullCharSet[Math.floor(Math.random() * fullCharSet.length)];
@@ -95,11 +99,10 @@ if (specialConfirm && numberConfirm && lowerConfirm && upperConfirm) {
             randomPassword += uppercase[Math.floor(Math.random() * uppercase.length)];
             }
 };
+
 // return password
 return randomPassword;
-console.log(randomPassword);
-
-}
+};
 
 // Write password to the #password input
 function writePassword() {
