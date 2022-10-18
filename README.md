@@ -14,7 +14,7 @@ The project can be found and deployed from my GitHub page https://eddygoto.githu
 ## Usage
 
 Click on the 'Generate Password' button the page to start a series of questions that will produce a random number generator for you!
-![Screenshot](assets/eddygoto.github.io_Password-Generator_.png)
+![Screenshot](/Assets/eddygoto.github.io_Password-Generator_.png)
 
 ## Credits
 
